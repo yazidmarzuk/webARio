@@ -1,0 +1,45 @@
+/* CSS for teachers home page */
+.navbar {
+  background: rgb(28, 20, 171);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 20, 171, 1) 2%,
+    rgba(86, 133, 239, 1) 64%,
+    rgba(35, 109, 137, 1) 94%
+  );
+  box-shadow: 10px 10px 8px #888888 !important;
+}
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fab > .btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1000;
+  border-width: 10px;
+}
+.full-container {
+  width: 100vw !important;
+}
+
+ion-icon {
+  font-size: 64px;
+}
+
+.nav-tabs {
+  border-bottom-color: rgb(28, 20, 171);
+  border-bottom-width: 3px;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-color: rgb(28, 20, 171) rgb(28, 20, 171) #fff;
+  border-bottom-width: 5px;
+  border-bottom-color: #fff;
+}
+
+
+.navbar-brand{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

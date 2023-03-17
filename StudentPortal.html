@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Student Portal</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <div class="logo mr-auto">
+        <h1 class="text-light">
+          <a href="/index.html"><span>Webin-AR - Student Portal</span></a>
+        </h1>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div id="target">
+          <div id="target" style="width: 320px; height: 600px;">
+            <br /><br />
+            <iframe src="/videocall.html" style="border: 5px solid rgb(75, 159, 255); border-radius: 5%;"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <br /><br />
+        <div id="target" style=" width: 320px; height: 600px;">
+          <iframe id="sFrame"
+            src="https://gltf-viewer.donmccurdy.com#kiosk=1&model=https://storage.googleapis.com/blocks-town/tmp/busterDrone/busterDrone.gltf"
+            style="border: 3px solid rgb(75, 159, 255); border-radius: 5%;"></iframe>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4">
+        <br><br><br>
+        <div id="target1"
+          style=" height: 587px; overflow: scroll; border: 5px solid rgb(75, 159, 255); border-radius: 2%;">
+          <h2 style="font-family: 'Roboto';">&nbsp;Add New Note</h2>
+          <div class="container">
+            <div class="app" margin: 5vw;">
+              <hr>
+              <div class="input-single">
+                <div>
+                  <textarea
+                    style=" border-color: #007bff; padding: 20px; border-width: 5px; align-items: center; border-radius: 10px;"
+                    id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"
+                    cols="12"></textarea>
+                </div>
+              </div>
+
+              <!-- <div class="container">
+                <div class="row row-cols-4">
+                  <div class="col">
+                    <div class="buttons">
+                      <div class="container1">
+
+                        <a href="" class="btn1 effect01" target="_blank"><span>Start
+                          </span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="buttons">
+                      <div class="container1">
+
+                        <a href="" class="btn1 effect01" target="_blank"><span>Pause </span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="buttons">
+                      <div class="container1">
+
+                        <a href="" class="btn1 effect01" target="_blank"><span>Save </span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <button id="startbtn" class="btn1 effect01" title="Start Recording">Start Recognition</button>
+              <button id="pausebtn" class="btn1 effect01" title="Pause Recording">Pause Recognition</button>
+              <button id="savebtn" class="btn1 effect01" title="Save Note">Save Note</button>
+              <p id="recording-instructions" style="font-family: 'Roboto';font-size: 20px;">Press the <strong
+                  style="color:#000000;"><em>Start</em></strong>
+                button and allow access.</p>
+              <h3 style="font-family: 'Roboto';font-size: 20px;">My Notes</h3>
+              <hr style="position: relative; top: 2px; border: none; height: 2px; background: black; margin-bottom: 2px;">
+              <ul id="notes">
+
+                <li>
+                  <p class="no-notes" style="font-family: 'Roboto';font-size: 22px;">You don't have any notes.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          </div>
+
+
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="speech.js"></script>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      /*   padding: 2em 0em; */
+    }
+
+    .container1 {
+      align-items: center;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      background-color: #FFF;
+      padding: 10px 0px;
+      width: 500px;
+    }
+
+
+
+    .btn1 {
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 45px;
+      max-width: 500px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+    }
+
+    /*btn_background*/
+    .effect01 {
+      color: #FFF;
+      border: 4px solid #000;
+      box-shadow: 0px 0px 0px 1px #000 inset;
+      background-color: rgb(0, 0, 0);
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .effect01:hover {
+      border: 4px solid #666;
+      background-color: #FFF;
+      box-shadow: 0px 0px 0px 4px #EEE inset;
+    }
+
+    /*btn_text*/
+    .effect01 span {
+      transition: all 0.2s ease-out;
+      z-index: 2;
+    }
+
+    .effect01:hover span {
+      letter-spacing: 0.13em;
+      color: #333;
+    }
+
+    /*highlight*/
+    .effect01:after {
+      background: #FFF;
+      border: 0px solid #000;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .8;
+      position: absolute;
+      top: -50px;
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
+      width: 50px;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      /*easeOutCirc*/
+      z-index: 1;
+    }
+
+    .effect01:hover:after {
+      background: #FFF;
+      border: 20px solid #000;
+      opacity: 0;
+      left: 120%;
+      -webkit-transform: rotate(40deg);
+      transform: rotate(40deg);
+    }
+  </style>
+
+
+  <main id="main"></main>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlvtfuPKGuuK9O0JSSrbPpx6mD_mkpm3Q",
+      authDomain: "webin-ar-1095c.firebaseapp.com",
+      databaseURL: "https://webin-ar-1095c.firebaseio.com",
+      projectId: "webin-ar-1095c",
+      storageBucket: "webin-ar-1095c.appspot.com",
+      messagingSenderId: "227270577042",
+      appId: "1:227270577042:web:349af7d441b70b13380f4b",
+      measurementId: "G-4HZ8NY76VD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src='StudentPortal.js'></script>
+  <script src="Speech/speech.js"></script>  
+  <script src="assets/js/modelfunct.js"></script>
+
+
+</body>
+
+</html>

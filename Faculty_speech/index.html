@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Speech to text</title>
+        <meta name="description" content=" faculty speech to text">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .output{
+                display: block;
+                width: 80%;
+                height:400px;
+                margin: 50px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyDlvtfuPKGuuK9O0JSSrbPpx6mD_mkpm3Q",
+    authDomain: "webin-ar-1095c.firebaseapp.com",
+    databaseURL: "https://webin-ar-1095c.firebaseio.com",
+    projectId: "webin-ar-1095c",
+    storageBucket: "webin-ar-1095c.appspot.com",
+    messagingSenderId: "227270577042",
+    appId: "1:227270577042:web:349af7d441b70b13380f4b",
+    measurementId: "G-4HZ8NY76VD"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db= firebase.firestore();
+</script>
+        <button class="clear">Clear</button>
+        <textarea class="output"></textarea>
+        <script type="module" src="Fspeech.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    </body>
+</html>
